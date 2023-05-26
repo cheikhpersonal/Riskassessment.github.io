@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Evaluation de risque</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      margin-top: 0;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    
+    #result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Risk Assessment</h1>
+  
+  <h2>Risques</h2>
+  <table id="riskTable">
+    <thead>
+      <tr>
+        <th>Risk</th>
+        <th>Risk Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="risque economique" placeholder="Risk 1" required></td>
+        <td><input type="number" name="risk1Value" min="0" max="10" required></td>
+      </tr>
+      <td><input type="text" name="risque strategique" placeholder="Risk 1" required></td>
+        <td><input type="number" name="risk1Value" min="0" max="10" required></td>
+      </tr>
+      <td><input type="text" name="risque financier" placeholder="Risk 1" required></td>
+        <td><input type="number" name="risk1Value" min="0" max="10" required></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="risque operationel" placeholder="Risk 2" required></td>
+        <td><input type="number" name="risk2Value" min="0" max="10" required></td>
+      </tr>
+      <!-- Repeat the above two rows for the remaining risks -->
+    </tbody>
+  </table>
+  
+  <h2>Responsabilites</h2>
+  <table id="responsibilityTable">
+    <thead>
+      <tr>
+        <th>Responsibility</th>
+        <th>Risk Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Assurer la gestion du materiel, du mobilier et des immeubles affectes a l'usage collectif ded services centraux</td>
+        <td><input type="number" name="financialRisk" min="0" max="10" required></td>
+      </tr>
+      <tr>
+        <td>Assurer la gestion des credits de functionnement</td>
+        <td><input type="number" name="operationsRisk" min="0" max="10" required></td>
+      </tr>
+      <td>Centraliser l'etude des projets de demande de credits</td>
+        <td><input type="number" name="operationsRisk" min="0" max="10" required></td>
+      </tr>
+      <td>Gerer les questions relevant du protocole et de l'organisation des conferences internationales</td>
+        <td><input type="number" name="operationsRisk" min="0" max="10" required></td>
+      </tr>
+      <td>Gerer les titres de voyage</td>
+        <td><input type="number" name="operationsRisk" min="0" max="10" required></td>
+      </tr>
+      <td>Assurer le suivi des questions de securite interieure et exterieure des immeubles</td>
+        <td><input type="number" name="operationsRisk" min="0" max="10" required></td>
+      </tr>
+      <td>Assurer l'acceuil et l'orientation des usagers a l'interieur du departement</td>
+        <td><input type="number" name="operationsRisk" min="0" max="10" required></td>
+      </tr>
+      <td>Coordonner la representation du departement dans les manifestations commerciales et culturelles</td>
+        <td><input type="number" name="operationsRisk" min="0" max="10" required></td>
+      </tr>
+      <td>Assurer le suivi de la prise en charge des besoins du minstere en matiere d'archivage</td>
+        <td><input type="number" name="operationsRisk" min="0" max="10" required></td>
+      </tr>
+      <!-- Repeat the above two rows for the remaining responsibilities -->
+    </tbody>
+  </table>
+  <button id="calculateBtn">Calculate</button>
+
+  <div id="result" style="display: none;">
+    <h2>Result</h2>
+    <table id="resultTable">
+      <thead>
+        <tr>
+          <th>Responsibility</th>
+          <th>Total Risk</th>
+        </tr>
+      </thead>
+      <tbody id="resultList"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
